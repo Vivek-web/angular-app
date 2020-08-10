@@ -1,0 +1,24 @@
+p {
+    font-family: Lato;
+}
+
+.common {
+    width: CUSTOM;
+}
+
+.divbrdr {
+    border: 1px solid #000;
+}
+
+.newimg img {
+    width: 100%;
+}
+
+.divbrdr {
+    min-height: 160px;
+    height: 160px;
+}
+
+.divbrdr img.divbrdr_img {
+    width: 100%;
+}

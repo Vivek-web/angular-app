@@ -1,0 +1,37 @@
+<div style="padding-top:50px">
+</div>
+
+<div class="container">
+    <h3>Imag Gallery</h3>
+    <!-- Content here -->
+    <div class="row">
+        <div class="col-sm" *ngFor="let data of allimages; let i=index">
+            <div class="common newimg divbrdr ">
+                <a data-toggle="modal" (click)="open(data.path,data.id)" data-target=".bd-example-modal-lg">
+                    <img class="divbrdr_img" src="{{data.path}}" style="cursor: pointer;">
+
+                </a>
+            </div>
+
+
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                        </div>
+                        <div class="modal-body">
+                            <img [src]="source" style="width: 100%; height: 400px;">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" (click)="deleteimage(source,data.id)" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
